@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="about.css">
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <a href="#" class="logo">
+            <img src="assets/img/logosinfondo.png" alt="Logo" class="logo-img">
+        </a>
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="about.html">Sobre mi</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        
+        <div class="icons">
+            <a href="#" class="fas fa-shopping-cart"></a>
+            <a href="#" class="fas fa-user"></a>
+        </div>
+
+<!-- Popup carrito-->
+        <div id="cart-popup" class="popup">
+    <div class="popup-content">
+        <button class="close-button" title="Cerrar">&times;</button>
+        <h3>Tu Carrito de Compras</h3>
+        <div class="cart-items">
+            <p style="text-align: center; color: #888;">Tu carrito está vacío.</p>
+        </div>
+        <div class="cart-summary">
+            <p>Total: <span id="cart-total">0.00 €</span></p>
+        </div>
+        <div class="checkout-button-container"> <button class="checkout-button">Finalizar Compra</button>
+        </div>
+    </div>
+</div>
+
+<!-- Popup Login -->
+  <div id="user-popup" class="popup">
+    <div class="popup-content">
+      <button class="close-button" title="Cerrar">&times;</button>
+      <h3>Accede a tu cuenta</h3>
+      <form class="user-form" id="login-form">
+        <input type="email" id="email" placeholder="Correo electrónico" required />
+        <input type="password" id="password" placeholder="Contraseña" required />
+        <button type="submit" class="login-button">Iniciar Sesión</button>
+        <p><a href="#">¿Olvidaste tu contraseña?</a></p>
+        <p>¿No tienes cuenta? <a href="#" id="open-register">Regístrate aquí</a></p>
+      </form>
+      <p id="login-message" style="color: red; font-size: 1.2rem;"></p>
+    </div>
+  </div>
+
+  <!-- Popup Registro -->
+  <div id="register-popup" class="popup">
+    <div class="popup-content">
+      <button class="close-button" title="Cerrar">&times;</button>
+      <h3>Crear Cuenta</h3>
+      <form class="user-form" id="register-form">
+        <input type="email" id="register-email" placeholder="Correo electrónico" required />
+        <input type="password" id="register-password" placeholder="Contraseña" required />
+        <button type="submit" class="login-button">Registrarse</button>
+        <p>¿Ya tienes cuenta? <a href="#" id="open-login">Inicia sesión aquí</a></p>
+      </form>
+      <p id="register-message" style="color: red; font-size: 1.2rem;"></p>
+    </div>
+  </div>
+     </header>
+
+    <!-- home section -->
+        <section class="home" id="home">
+            <div class="content"></div>
+        </section>
+
+
+    <!-- INFO -->
+    <section class="about-me" id="about">
+    <div class="about-me-content">
+        <div class="about-me-image">
+            <img src="assets/img/1745935308161.jpg" alt="Tu Foto">
+        </div>
+        <div class="about-me-text">
+            <h2>Sobre mí</h2>
+            <h3>¡Hola! Soy Érika N.M., la persona detrás de Rous Meri y su baúl.</h3>
+            <p>Desde siempre he tenido una pasión por la creatividad y las cosas hechas a mano. Lo que empezó como un hobby, pronto se convirtió en un sueño: crear piezas únicas que transmitan emoción y personalidad. Cada artículo que verás en mi baúl está diseñado y elaborado con mucho cariño, prestando atención a cada detalle para que recibas algo verdaderamente especial.</p>
+            <p>Me encanta experimentar con diferentes materiales y técnicas, y mi objetivo es que cada creación te haga sentir especial y que refleje tu estilo. Además, me apasiona la idea de que puedas personalizar tus complementos y que juntos podamos diseñar piezas que cuenten tu historia.</p>
+            <p>¡Gracias por visitar mi baúl y por apoyar el trabajo artesanal! Espero que disfrutes descubriendo cada rincón y que encuentres esa pieza que te haga sonreír.</p>
+            <a href="contacto.html" class="btn">Contáctame</a>
+        </div>
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-row">
+                <div class="footer-link">
+                    <h4>La marca</h4>
+                    <ul>
+                        <li><a href="#">Sobre mí</a></li>
+                        <li><a href="#">Nuestros Servicios</a></li>
+                        <li><a href="#">Política de privacidad</a></li>
+                    </ul>
+                </div>
+    
+                <div class="footer-link">
+                    <h4>Ayuda</h4>
+                    <ul>
+                        <li><a href="#">Preguntas</a></li>
+                        <li><a href="#">Compras</a></li>
+                        <li><a href="#">Envíos</a></li>
+                        <li><a href="#">Pago</a></li>
+                    </ul>
+                </div>
+    
+                <div class="footer-link">
+                    <h4>Catálogo</h4>
+                    <ul>
+                        <li><a href="#">Pendientes</a></li>
+                        <li><a href="#">Accesorios</a></li>
+                        <li><a href="#">Deco</a></li>
+                        <li><a href="#">Pantallas</a></li>
+                    </ul>
+                </div>
+    
+                <div class="info">
+                    <p>Desing by Érika N.M.</p>
+                    <p>📍 Barakaldo (Vizcaya)</p>
+                    <p>📧 rousmeriysubaul@gmail.com</p>
+                </div>
+    
+                <img src="assets/img/logomorado.png" class="logomorado">
+                <div class="footer-link">
+                    <h4>Síguenos</h4>
+                    
+                    <div class="social-link">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+  
+  <div class="copy">
+    <p>© 2025 - Rous Meri y su baúl ✨</p>
+  </div>
+
+      <!-- jquery -->
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+      <!-- js -->
+       <script src="script.js"></script>
+
+</body>
+</html>

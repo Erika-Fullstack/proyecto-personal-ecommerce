@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rous Meri y su baul</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- header -->
+     <header>
+        <a href="#" class="logo">
+            <img src="assets/img/logosinfondo.png" alt="Logo" class="logo-img">
+        </a>
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="about.html">Sobre mi</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <div class="icons">
+            <a href="#" class="fas fa-shopping-cart"></a>
+            <a href="#" class="fas fa-user"></a>
+        </div>
+
+        <!-- Popup carrito -->
+        <div id="cart-popup" class="popup">
+    <div class="popup-content">
+        <button class="close-button" title="Cerrar">&times;</button>
+        <h3>Tu Carrito de Compras</h3>
+        <div class="cart-items">
+            <p style="text-align: center; color: #888;">Tu carrito está vacío.</p>
+        </div>
+        <div class="cart-summary">
+            <p>Total: <span id="cart-total">0.00 €</span></p>
+        </div>
+        <div class="checkout-button-container"> <button class="checkout-button">Finalizar Compra</button>
+        </div>
+    </div>
+</div>
+
+<!-- Popup Login -->
+  <div id="user-popup" class="popup">
+    <div class="popup-content">
+      <button class="close-button" title="Cerrar">&times;</button>
+      <h3>Accede a tu cuenta</h3>
+      <form class="user-form" id="login-form">
+        <input type="email" id="email" placeholder="Correo electrónico" required />
+        <input type="password" id="password" placeholder="Contraseña" required />
+        <button type="submit" class="login-button">Iniciar Sesión</button>
+        <p><a href="#">¿Olvidaste tu contraseña?</a></p>
+        <p>¿No tienes cuenta? <a href="#" id="open-register">Regístrate aquí</a></p>
+      </form>
+      <p id="login-message" style="color: red; font-size: 1.2rem;"></p>
+    </div>
+  </div>
+
+  <!-- Popup Registro -->
+  <div id="register-popup" class="popup">
+    <div class="popup-content">
+      <button class="close-button" title="Cerrar">&times;</button>
+      <h3>Crear Cuenta</h3>
+      <form class="user-form" id="register-form">
+        <input type="email" id="register-email" placeholder="Correo electrónico" required />
+        <input type="password" id="register-password" placeholder="Contraseña" required />
+        <button type="submit" class="login-button">Registrarse</button>
+        <p>¿Ya tienes cuenta? <a href="#" id="open-login">Inicia sesión aquí</a></p>
+      </form>
+      <p id="register-message" style="color: red; font-size: 1.2rem;"></p>
+    </div>
+  </div>
+
+     </header>
+
+    <!-- home section -->
+        <section class="home" id="home">
+            <div class="content">
+                <h3> <br> </h3>
+                <a href="productos.html" class="btn">Comprar ahora</a>
+            </div>
+        </section>
+    
+    <!-- iconos 1-->
+    <div class="iconos-container">
+        <div class="icono">
+          <img src="assets/iconos/icons8-hecho-a-mano-100.png" alt="Icono 1">
+          <h2>Producto handmade</h2>
+            <p>Todos nuestros productos son hechos a mano, 
+                <br>con mucho cariño y dedicación.</p>
+        </div>
+        <div class="icono">
+          <img src="assets/iconos/icons8-cliente-100.png" alt="Icono 2">
+          <h2>Trato cercano</h2>
+            <p>Nos gusta tener un trato cercano con nuestros clientes,
+                <br> para que se sientan como en casa.</p>
+        </div>
+        <div class="icono">
+          <img src="assets/iconos/icons8-exclusive-64.png" alt="Icono 3">
+          <h2>Exclusividad</h2>
+            <p>Todos nuestros productos son únicos y exclusivos, 
+                <br>no encontrarás nada igual.</p>
+        </div>
+      </div>
+
+    <!-- slide -->
+    <div class="slider-container">
+        <div class="slider" id="slider">
+          <div class="slide">
+            <img src="assets/img/IMG_20240703_171528.jpg" alt="Pendientes">
+            <div class="info">
+              <h2>Pendientes</h2>
+              <p>Elige entre todas las opciones de pendientes que tenemos disponibles.</p>
+              <a href="productos.html" class="buy-button">Comprar</a>
+            </div>
+          </div>
+          
+          <div class="slide">
+            <img src="assets/img/IMG_20250314_185745.jpg" alt="Colecciones">
+            <div class="info">
+              <h2>Colecciones</h2>
+              <p>Tenemos diferentes colecciones esperándote. ¡Echa un vistazo!</p>
+              <a href="productos.html" class="buy-button">Comprar</a>
+            </div>
+          </div>
+
+          <div class="slide">
+            <img src="assets/img/IMG_20240814_103212.jpg" alt="Otros complementos">
+            <div class="info">
+              <h2>Otros complementos</h2>
+              <p>Llaveros, marcapáginas, puntos de libro... ¡Lo que más te guste!</p>
+              <a href="productos.html" class="buy-button">Comprar</a>
+            </div>
+        </div>
+
+        
+    </div>
+        <div class="controls">
+          <button onclick="moveSlide(-1)">&#10094;</button>
+          <button onclick="moveSlide(1)">&#10095;</button>
+        </div>
+      </div>
+      
+    <!-- productos -->
+    <section id="productos">
+        <h2 class="section-title">Nuestros productos destacados</h2>
+        <div class="parent">
+          <div class="card">
+            <div class="image-container">
+              <img src="assets/img/IMG_20240607_075802.jpg" alt="Imagen de pendientes">
+            </div>
+            <h3 class="card-title">Palmier</h3>  
+          </div>
+      
+          <div class="card">
+            <div class="image-container">
+              <img src="assets/img/IMG_20250203_120443.jpg" alt="Imagen de pendientes">
+            </div>
+            <h3 class="card-title">Poison</h3>   
+          </div>
+      
+          <div class="card">
+            <div class="image-container">
+              <img src="assets/img/IMG_20250407_174356.jpg" alt="Imagen de pendientes">
+            </div>
+            <h3 class="card-title">Flores #2</h3> 
+          </div>
+        </div>
+      </section>
+
+
+<!-- iconos 2 -->
+<section class="iconos-container2">
+  <div class="icono">
+      <img src="assets/iconos/el-pensamiento-de-diseno.avif" alt="Icono 1">
+      <h2>Producto personalizable</h2>
+      <p>Podemos personalizar el producto que quieras, 
+          <br>solo tienes que decírnoslo.</p>
+  </div>
+  <div class="icono">
+      <img src="assets/iconos/entrega-de-paquetes.avif" alt="Icono 2">
+      <h2>Entrega en mano</h2>
+      <p>Si vives en la zona de Barakaldo o alrededores, 
+          <br>podemos entregarte el pedido en mano.</p>
+  </div>
+  <div class="icono">
+      <img src="assets/iconos/enviado.avif" alt="Icono 3">
+      <h2>Envío certificado</h2>
+      <p>Podemos enviarte el pedido a casa, 
+          <br>de forma segura mediante Correos.</p>
+  </div>
+  <div class="icono">
+      <img src="assets/iconos/pago-seguro.avif" alt="Icono 3">
+      <h2>Elige el pago</h2>
+      <p>Podrás elegir entre diferentes métodos de pago, 
+          <br>para que elijas el que más te guste.</p>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+      <div class="footer-row">
+          <div class="footer-link">
+              <h4>La marca</h4>
+              <ul>
+                  <li><a href="#">Sobre mí</a></li>
+                  <li><a href="#">Nuestros Servicios</a></li>
+                  <li><a href="#">Política de privacidad</a></li>
+              </ul>
+          </div>
+
+          <div class="footer-link">
+              <h4>Ayuda</h4>
+              <ul>
+                  <li><a href="#">Preguntas</a></li>
+                  <li><a href="#">Compras</a></li>
+                  <li><a href="#">Envíos</a></li>
+                  <li><a href="#">Pago</a></li>
+              </ul>
+          </div>
+
+          <div class="footer-link">
+              <h4>Catálogo</h4>
+              <ul>
+                  <li><a href="#">Pendientes</a></li>
+                  <li><a href="#">Accesorios</a></li>
+                  <li><a href="#">Deco</a></li>
+                  <li><a href="#">Pantallas</a></li>
+              </ul>
+          </div>
+
+          <div class="info">
+              <p>Desing by Érika N.M.</p>
+              <p>📍 Barakaldo (Vizcaya)</p>
+              <p>📧 rousmeriysubaul@gmail.com</p>
+          </div>
+
+          <img src="assets/img/logomorado.png" class="logomorado">
+          <div class="footer-link">
+              <h4>Síguenos</h4>
+              
+              <div class="social-link">
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                  <a href="#"><i class="fab fa-whatsapp"></i></a>
+              </div>
+          </div>
+      </div>
+  </div>
+</footer>
+
+<div class="copy">
+  <p>© 2025 - Rous Meri y su baúl ✨</p>
+</div>
+
+
+    <!-- jquery -->
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- js -->
+     <script src="script.js"></script>
+</body>
+</html>

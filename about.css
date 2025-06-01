@@ -1,0 +1,254 @@
+/**,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%; 
+}*/
+
+.home {
+    width: 100%; 
+    height: auto; 
+    background: url(assets/img/3.png) no-repeat center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 90%; 
+    margin-top: 8rem;
+}
+
+/* INFO */
+
+.about-me {
+    padding: 6rem 2rem;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh; 
+    margin-bottom: 250px; 
+}
+
+.about-me-content {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    gap: 3rem; 
+    max-width: 1200px; 
+    width: 90%; 
+    margin: 0 auto; 
+    box-sizing: border-box; 
+    padding: 0 1rem; 
+}
+
+.about-me-image {
+    flex-shrink: 0;
+    width: 280px; 
+    height: 400px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transform: rotate(-5deg);
+    transition: transform 0.3s ease;
+}
+
+.about-me-image:hover {
+    transform: rotate(0deg) scale(1.03);
+}
+
+.about-me-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transform: rotate(5deg) scale(1.2);
+    transform-origin: center;
+    object-position: center center;
+}
+
+.about-me-text {
+    flex-grow: 1;
+    text-align: center;
+    max-width: 700px;
+}
+
+.about-me-text h2 {
+    font-size: 3rem;
+    color: #995599;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.about-me-text h3 {
+    font-size: 1.8rem;
+    color: #565656;
+    margin-bottom: 1.5rem;
+    line-height: 1.4;
+}
+
+.about-me-text p {
+    font-size: 1.1rem;
+    color: #444;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+.about-me-text .btn {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.8rem 2rem;
+    background-color: #e06098;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.about-me-text .btn:hover {
+    background-color: #c74c82;
+}
+
+/* --- Media Queries para Responsive Design --- */
+
+/* Media query para Tablets (768px a 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .about-me {
+        padding: 4rem 1rem;
+        min-height: auto;
+        margin-top:-175px;
+        margin-bottom: 240px;
+    }
+
+    .about-me-content {
+        flex-direction: column; 
+        gap: 2rem;
+        width: 95%;
+        padding: 0;
+    }
+
+    .about-me-image {
+        width: 250px;
+        height: 350px;
+    }
+
+    .about-me-text {
+        text-align: center;
+        max-width: 600px;
+    }
+
+    .about-me-text h2 {
+        font-size: 2.5rem;
+    }
+
+    .about-me-text h3 {
+        font-size: 1.6rem;
+    }
+
+    .about-me-text p {
+        font-size: 1rem;
+    }
+
+    .about-me-text .btn {
+        padding: 0.7rem 1.5rem;
+        font-size: 0.95rem;
+        margin: 1.5rem auto 0 auto;
+    }
+}
+
+/* Media query para Escritorio (min-width: 1024px) */
+@media (min-width: 1024px) {
+    .about-me {
+        padding: 6rem 2rem; 
+        min-height: 80vh;
+        margin-bottom: 250px;
+    }
+
+    .about-me-content {
+        flex-direction: row;
+        align-items: center;
+        gap: 4rem;
+        width: 90%;
+        padding: 0;
+    }
+
+    .about-me-image {
+        width: 350px;
+        height: 450px;
+    }
+
+    .about-me-text {
+        text-align: left;
+        max-width: 700px;
+    }
+
+    .about-me-text h2 {
+        font-size: 3rem;
+    }
+
+    .about-me-text h3 {
+        font-size: 1.8rem;
+    }
+
+    .about-me-text p {
+        font-size: 1.1rem;
+    }
+}
+
+
+/* Media query para Móviles (max-width: 767px)*/
+@media (max-width: 767px) {
+    .home .content{
+    margin-top: 50rem;
+    }
+
+    .about-me {
+        padding: 3rem 0.5rem;
+        min-height: auto;
+        margin-top: -150px;
+        margin-bottom: 250px;
+    }
+
+    .about-me-content {
+        flex-direction: column;
+        gap: 1.5rem;
+        width: 98%;
+        padding: 0 0.5rem;
+    }
+
+    .about-me-image {
+        width: 220px;
+        height: 300px;
+    }
+
+    .about-me-text {
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    .about-me-text h2 {
+        font-size: 2.2rem;
+    }
+
+    .about-me-text h3 {
+        font-size: 1.4rem;
+    }
+
+    .about-me-text p {
+        font-size: 0.95rem;
+    }
+
+    .about-me-text .btn {
+        padding: 0.7rem 1.5rem;
+        font-size: 0.95rem;
+        margin: 1.5rem auto 0 auto;
+    }
+}

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contacto.css">
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <a href="#" class="logo">
+            <img src="assets/img/logosinfondo.png" alt="Logo" class="logo-img">
+        </a>
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="about.html">Sobre mi</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+     </header>
+
+    <!-- home section -->
+    <section class="home" id="home">
+        <div class="content"></div>
+    </section>
+
+    <!-- contacto-->
+    <section id="contacto">
+        <div class="content">
+            <div class="contact-container">
+                <div class="contact-text-container">
+                    <p class="contact-text">Tienes dudas, ideas brillantes o simplemente quieres saludar?
+                        Estamos encantadas de escucharte (¡como si fueras música para nuestros pendientes!).
+                        <br><br>
+                        Ya sea para hacer un pedido especial, preguntar por una pieza única o contarnos lo bien que te queda tu nuevo complemento, puedes escribirnos cuando quieras. Prometemos responderte con la misma dedicación con la que creamos cada pieza: a mano, con mimo y una pizca de buen humor.
+                        <br><br>
+                        📩 Email: rousmeriysubaul@gmail.com<br>
+                        📱 Instagram: @rousmeriysubaul
+                        <br><br>
+                        No seas tímida, ¡tu mensaje puede ser el principio de algo precioso!</p>
+                    <br>
+                    <a href="#loginPopup" class="boton1">Login</a> 
+                </div>
+
+                <div id="loginPopup" class="loginpopup">
+                    <div class="popup-content">
+                      <span id ="loginClose" class="close">&times;</span>
+                      <h2>Login</h2>
+                      <form id="loginForm" class="form-login">
+                        <label for="username">User</label>
+                        <input type="text" id="username" name="username" required>
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required>
+                        <button id="Submit" class="submitButton" type="submit">Submit</button>
+                        <button id="Register" class="registerButton" type="submit">Register</button>
+                      </form>
+                    </div>
+                  </div>
+
+                <div class="form-container">
+                    <form action="#" method="GET">
+                        <label for="name">Nombre:</label>
+                        <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+
+                        <label for="email">Correo electrónico:</label>
+                        <input type="email" id="email" name="email" placeholder="Tu correo electrónico" required>
+
+                        <label for="message">Mensaje:</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Escribe aquí tu mensaje" required></textarea>
+
+                        <label>
+                            <input class="checkbox" type="checkbox" id="checkbox" required>
+                            <span>Acepto las <a href="#">condiciones</a></span>
+                        </label>
+
+                        <button type="submit" id="logueo" class="entrar">Entrar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-row">
+            <div class="footer-link">
+                <h4>La marca</h4>
+                <ul>
+                    <li><a href="#">Sobre mí</a></li>
+                    <li><a href="#">Nuestros Servicios</a></li>
+                    <li><a href="#">Política de privacidad</a></li>
+                </ul>
+            </div>
+  
+            <div class="footer-link">
+                <h4>Ayuda</h4>
+                <ul>
+                    <li><a href="#">Preguntas</a></li>
+                    <li><a href="#">Compras</a></li>
+                    <li><a href="#">Envíos</a></li>
+                    <li><a href="#">Pago</a></li>
+                </ul>
+            </div>
+  
+            <div class="footer-link">
+                <h4>Catálogo</h4>
+                <ul>
+                    <li><a href="#">Pendientes</a></li>
+                    <li><a href="#">Accesorios</a></li>
+                    <li><a href="#">Deco</a></li>
+                    <li><a href="#">Pantallas</a></li>
+                </ul>
+            </div>
+  
+            <div class="info">
+                <p>Desing by Érika N.M.</p>
+                <p>📍 Barakaldo (Vizcaya)</p>
+                <p>📧 rousmeriysubaul@gmail.com</p>
+            </div>
+  
+            <img src="assets/img/logomorado.png" class="logomorado">
+            <div class="footer-link">
+                <h4>Síguenos</h4>
+                
+                <div class="social-link">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+  </footer>
+  
+  <div class="copy">
+    <p>© 2025 - Rous Meri y su baúl ✨</p>
+  </div>
+
+      <!-- jquery -->
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+      <!-- js -->
+       <script src="script.js"></script>
+
+</body>
+</html>

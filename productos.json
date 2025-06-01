@@ -1,0 +1,148 @@
+ [
+      {
+        "id": "producto0",
+        "name": "Palmier",
+        "description": "Un pendiente que te traslada a los días de verano. Realizado en resina epoxi en el color elegido y con una base de acero inoxidable en forma de hoja. A pesar de su tamaño, no pesa.",
+        "price": "12€",
+        "imageUrl": "assets/img/IMG_20240607_075802.jpg",
+        "colors": ["Purpurina rosa", "Purpurina azul", "Purpurina verde", "Purpurina morado", "Purpurina naranja", "Purpurina amarillo"]
+      },
+      {
+        "id": "producto1",
+        "name": "Cascada color",
+        "description": "Corazones realizados en resina epoxi, creando una cascada de color. En total son tres corazones que puedes elegir en un sólo color o combinar varios colores.",
+        "price": "8€",
+        "imageUrl": "assets/img/IMG_20240702_170022.jpg",
+        "colors": ["Azules", "Verdes", "Morados", "Rosas", "Naranjas", "Multicolor"]
+      },
+      {
+        "id": "producto2",
+        "name": "Abanico",
+        "description": "No sé qué tiene este modelo que lo hace tan especial. Base dorada con relieve en acero inoxidable y de ella cuelga un pieza de tela con un grabado.",
+        "price": "8€",
+        "imageUrl": "assets/img/IMG_20240703_171528.jpg",
+        "colors": ["Turquesa", "Morado", "Azul eléctrico", "Rosa fucsia", "Verde", "Arena", "Blanco roto"]
+      },
+      {
+        "id": "producto3",
+        "name": "Llavero perrito globo",
+        "description": "Llavero con un perrito globo en resina epoxi. Arandela de acero inoxidable.",
+        "price": "5€",
+        "imageUrl": "assets/img/IMG_20240814_103212.jpg",
+        "colors": ["Purpurina multicolor", "Purpurina plata", "Azul", "Verde", "Purpurina rosa", "Negro"]
+      },
+      {
+        "id": "producto4",
+        "name": "Poison",
+        "description": "Frasquito en forma de corazón, realizado en metacrilato espejo en tono rosa y champán",
+        "price": "15€",
+        "imageUrl": "assets/img/IMG_20250203_120443.jpg",
+        "colors": ["Color único"]
+      },
+      {
+        "id": "producto5",
+        "name": "Flamingo",
+        "description": "Hoja de palmera hecha en resina epoxi color verde y un flamenco de acero en color rosa para darle ese toque veraniego.",
+        "price": "10€",
+        "imageUrl": "assets/img/IMG_20250314_185745.jpg",
+        "colors": ["Color único"]
+      },
+      {
+        "id": "producto6",
+        "name": "Collar ojito",
+        "description": "Un collar para combinarlo con tus looks más elegantes o informales. Tiene una parte de acero inoxidable y otra parte de perlas blancas. En el cierre redondo, colgamos el Ojo Turco en forma de corazón con más charms.",
+        "price": "12€",
+        "imageUrl": "assets/img/IMG_20250326_173426.jpg",
+        "colors": ["Amarillo", "Rosa", "Azul", "Verde"]
+      },
+      {
+        "id": "producto7",
+        "name": "Pulseras Euskadi",
+        "description": "Pulseras de cordón encerado en diferentes colores. Puedes elegir entre los charms de Lauburu, Eguzkilore, Baldosa de Bilbao.",
+        "price": "6€",
+        "imageUrl": "assets/img/IMG_20250407_173447.jpg",
+        "colors": ["Azul", "Amarillo", "Rosa", "Verde", "Naranja"]
+      },
+      {
+        "id": "producto8",
+        "name": "Spring",
+        "description": "Una mezcla entre media flor o un abanico. Un modelo muy primaveral y de ahí su nombre.",
+        "price": "10€",
+        "imageUrl": "assets/img/IMG_20250407_174023.jpg",
+        "colors": ["Rosa", "Multicolor", "Amarillo", "Verde", "Azul", "Naranja"]
+      },
+        {
+        "id": "producto9",
+        "name": "Flores#2",
+        "description": "Pendientes de flor seca natural en tono rojo rosado y cierre de acero inoxidable.",
+        "price": "10€",
+        "imageUrl": "assets/img/IMG_20250407_174356.jpg",
+        "colors": ["Color único"]
+      },
+      {
+        "id": "producto10",
+        "name": "Mariposa flor",
+        "description": "Pieza de acero inoxidable en color plata en forma de mariposa con flores secas dentro (a elegir entre difernetes flores). Cierre de acero inoxidable.",
+        "price": "10€",
+        "imageUrl": "assets/img/IMG_20250414_101807.jpg",
+        "colors": ["Color único"]
+      },
+      {
+        "id": "producto11",
+        "name": "Maripositas",
+        "description": "Pieza de acero inoxidable en diferentes colores, en forma de mariposa. Cierre de acero inoxidable en forma de bolita.",
+        "price": "6€",
+        "imageUrl": "assets/img/IMG_20250424_142830.jpg",
+        "colors": ["Rojo", "Rosa", "Amarillo", "Verde", "Azul", "Morado"]
+      },
+      {
+        "id": "producto12",
+        "name": "Mariposa paniculata",
+        "description": "Mariposa de acero inoxidable color plata con el ala cubierta de paniculata de colores. Cierre de acero inoxidable.",
+        "price": "10€",
+        "imageUrl": "assets/img/IMG_20250429_192117.jpg",
+        "colors": ["Multicolor"]
+      },
+  
+      {
+        "id": "producto13",
+        "name": "First",
+        "description": "Pieza de metacrilato diseñada al 100% por Rous Meri y su baúl. Combinación de negro purpurina y espejo plata.",
+        "price": "15€",
+        "imageUrl": "assets/img/IMG_20241206_204143.jpg",
+        "colors": ["Color único"]
+      },
+      {
+        "id": "producto14",
+        "name": "Corazón corazón",
+        "description": "Corazón de resina epoxi colgado de un aro de acero inoxidable en color plata.",
+        "price": "8€",
+        "imageUrl": "assets/img/IMG_20250115_180824.jpg",
+        "colors": ["Purpurina roja", "Turquesa", "Morado", "Azul eléctrico", "Rosa fucsia", "Verde", "Arena", "Blanco roto"]
+      },
+      {
+        "id": "producto15",
+        "name": "Filigrana",
+        "description": "Precioso pendiente de madera en diferentes colores y con formas cortadas.",
+        "price": "8€",
+        "imageUrl": "assets/img/IMG_20250219_173008.jpg",
+        "colors": ["Negro", "Blanco", "Azul", "Mostaza", "Verde"]
+      },
+      {
+        "id": "producto16",
+        "name": "Pétalos flamencos",
+        "description": "Ole ole y ole por esta combinacion tan bonita. Pétalos acrílicos colgados en el centro de un aro de acero inoxidable dorado.",
+        "price": "12€",
+        "imageUrl": "assets/img/IMG_20250429_191404.jpg",
+        "colors": ["Negro", "Rosa", "Rojo"]
+      },
+      {
+        "id": "producto17",
+        "name": "Solete",
+        "description": "Preciosa flor natural seca en color naranja, encapsulada en el centro de un aro de acero inoxidable dorado y cierre en forma de hojas.",
+        "price": "12€",
+        "imageUrl": "assets/img/IMG_20250429_191949.jpg",
+        "colors": ["Color único"]
+      }
+    ]
+  

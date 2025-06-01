@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="productos.css">
+    <link rel="stylesheet" href="search.css">
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <div id="menu-btn" class="fas fa-bars"></div>
+
+        <a href="#" class="logo">
+            <img src="assets/img/logosinfondo.png" alt="Logo" class="logo-img">
+        </a>
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="about.html">Sobre mi</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <div class="icons">
+            <a href="#" class="fas fa-shopping-cart"></a>
+            <a href="#" class="fas fa-user"></a>
+        </div>
+
+<!-- Popup carrito -->
+        <div id="cart-popup" class="popup">
+    <div class="popup-content">
+        <button class="close-button" title="Cerrar">&times;</button>
+        <h3>Tu Carrito de Compras</h3>
+        <div class="cart-items">
+            <p style="text-align: center; color: #888;">Tu carrito está vacío.</p>
+        </div>
+        <div class="cart-summary">
+            <p>Total: <span id="cart-total">0.00 €</span></p>
+        </div>
+        <div class="checkout-button-container"> <button class="checkout-button">Finalizar Compra</button>
+        </div>
+    </div>
+</div>
+
+<!-- Popup confirmación de la compra-->
+ <div id="confirm-popup" class="popup" style="display:none;">
+  <div class="popup-content" style="max-width: 400px; padding: 20px;">
+    <button class="close-button" title="Cerrar">&times;</button>
+    <h3>Confirmar Compra</h3>
+    <div id="confirm-items" style="max-height: 300px; overflow-y: auto; margin-bottom: 15px;"></div>
+    <p><strong>Total: <span id="confirm-total"></span> €</strong></p>
+    <div style="text-align: right;">
+      <button id="confirm-cancel" style="margin-right: 10px; padding: 8px 15px; cursor: pointer;">Cancelar</button>
+      <button id="confirm-ok" style="background-color: #28a745; color: white; padding: 8px 15px; cursor: pointer;">Confirmar</button>
+    </div>
+  </div>
+</div>
+
+<!-- Popup Login -->
+  <div id="user-popup" class="popup">
+    <div class="popup-content">
+      <button class="close-button" title="Cerrar">&times;</button>
+      <h3>Accede a tu cuenta</h3>
+      <form class="user-form" id="login-form">
+        <input type="email" id="email" placeholder="Correo electrónico" required />
+        <input type="password" id="password" placeholder="Contraseña" required />
+        <button type="submit" class="login-button">Iniciar Sesión</button>
+        <p><a href="#">¿Olvidaste tu contraseña?</a></p>
+        <p>¿No tienes cuenta? <a href="#" id="open-register">Regístrate aquí</a></p>
+      </form>
+      <p id="login-message" style="color: red; font-size: 1.2rem;"></p>
+    </div>
+  </div>
+
+  <!-- Popup Registro -->
+  <div id="register-popup" class="popup">
+    <div class="popup-content">
+      <button class="close-button" title="Cerrar">&times;</button>
+      <h3>Crear Cuenta</h3>
+      <form class="user-form" id="register-form">
+        <input type="email" id="register-email" placeholder="Correo electrónico" required />
+        <input type="password" id="register-password" placeholder="Contraseña" required />
+        <button type="submit" class="login-button">Registrarse</button>
+        <p>¿Ya tienes cuenta? <a href="#" id="open-login">Inicia sesión aquí</a></p>
+      </form>
+      <p id="register-message" style="color: red; font-size: 1.2rem;"></p>
+    </div>
+  </div>
+</header>
+
+     <!-- home section -->
+     <section class="home" id="home">
+        <div class="content">
+            <h3> <br> </h3>
+        </div>
+    </section>
+    
+    <!-- presentación productos -->
+    <section>
+        <div class="container1">
+          <div class="card">
+            <div class="card-inner" style="--clr:transparent;">
+              <div class="box">
+                <div class="imgBox">
+                  <img src="assets/img/IMG_20250407_174356.jpg" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="content">
+              <h3>Accesorios bonitos</h3>
+              <p>Si quieres lucir los mejores complementos para tu look, no puedes perderte nuestros modelos.</p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-inner" style="--clr: transparent;">
+              <div class="box">
+                <div class="imgBox">
+                  <img src="assets/img/IMG_20250203_120443.jpg" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="content">
+              <h3>Colecciones especiales</h3>
+              <p>Aquí podrás encontrar colecciones exclusivas y limitadas, pensadas para destacar y culminar tu lookazo.</p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-inner" style="--clr: transparent;">
+              <div class="box">
+                <div class="imgBox">
+                  <img src="assets/img/IMG_20250407_174023.jpg" alt="">
+                </div>
+                <div class="icon">
+                  <a href="contacto.html" class="iconBox"> <span class="material-symbols-outlined">
+                    </span>ENTRAR</a>
+                </div>
+              </div>
+            </div>
+            <div class="content">
+              <h3>Personaliza tus complementos</h3>
+              <p>¿Quieres lucir unos Rous Meri en alguna ocasión especial? Cuéntame de qué se trata y los diseñamos juntas.</p>
+            </div>
+          </div>
+        </div>
+</section>
+
+<!-- Buscador y filtros -->
+<div class="filter-box">
+        <h3>Buscar Productos</h3>
+        <div class="filter-group">
+            <label for="category-select">Categoría:</label>
+            <select id="category-select">
+              <option value="all">Todas</option>
+              <option value="pendientes">Pendientes</option>
+              <option value="llavero">Llaveros</option>
+              <option value="collar">Collar</option>
+              <option value="pulsera">Pulseras</option>
+            </select>
+        </div>
+        <button id="filter-button">Filtrar</button>
+    </div>
+
+<!-- Galería de productos -->
+<section class="gallery">
+  <div class="gallery-grid">
+      <div class="diamond" data-product-id="producto0" data-category="pendientes" data-price-range="6-10" data-name="Pendientes Palmier"><img src="assets/img/IMG_20240607_075802.jpg" alt="producto0"></div>
+      <div class="diamond" data-product-id="producto1" data-category="pendientes" data-price-range="6-10" data-name="Pendientes Cascada"><img src="assets/img/IMG_20240702_170022.jpg" alt="producto1"></div>
+      <div class="diamond" data-product-id="producto2" data-category="pendientes" data-price-range="6-10" data-name="Pendientes Abanico"><img src="assets/img/IMG_20240703_171528.jpg" alt="producto2"></div>
+      <div class="diamond" data-product-id="producto3" data-category="llavero" data-price-range="0-6" data-name="Llavero Perrito Globo"><img src="assets/img/IMG_20240814_103212.jpg" alt="producto3"></div>
+      <div class="diamond" data-product-id="producto4" data-category="pendientes" data-price-range="10-20" data-name="Pendientes Poison"><img src="assets/img/IMG_20250203_120443.jpg" alt="producto4"></div>
+      <div class="diamond" data-product-id="producto5" data-category="pendientes" data-price-range="6-10" data-name="Pendientes Flamingo"><img src="assets/img/IMG_20250314_185745.jpg" alt="producto5"></div>
+      <div class="diamond" data-product-id="producto6" data-category="collar" data-price-range="6-10" data-name="Collar Ojito"><img src="assets/img/IMG_20250326_173426.jpg" alt="producto6"></div>
+      <div class="diamond" data-product-id="producto7" data-category="pulsera" data-price-range="6-10" data-name="Pulseras Euskadi"><img src="assets/img/IMG_20250407_173447.jpg" alt="producto7"></div>
+      <div class="diamond" data-product-id="producto8" data-category="pendientes" data-price-range="6-10" data-name="Pendientes Spring"><img src="assets/img/IMG_20250407_174023.jpg" alt="producto8"></div>
+      <div class="diamond" data-product-id="producto9" data-category="pendientes" data-price-range="6-10" data-name="Pendientes Flores#2"><img src="assets/img/IMG_20250407_174356.jpg" alt="producto9"></div>
+      <div class="diamond" data-product-id="producto10" data-category="pendientes" data-price-range="6-10" data-name="Pendientes Mariposa Flor"><img src="assets/img/IMG_20250414_101807.jpg" alt="producto10"></div>
+      <div class="diamond" data-product-id="producto11" data-category="pendientes" data-price-range="6-10" data-name="Pendientes Maripositas"><img src="assets/img/IMG_20250424_142830.jpg" alt="producto11"></div>
+      <div class="diamond" data-product-id="producto12" data-category="pendientes" data-price-range="6-10" data-name="Pendientes Mariposa Paniculata"><img src="assets/img/IMG_20250429_192117.jpg" alt="producto12"></div>
+      <div class="diamond" data-pr oduct-id="producto13" data-category="pendientes" data-price-range="6-10" data-name="Pendientes First"><img src="assets/img/IMG_20241206_204143.jpg" alt="producto13"></div>
+      <div class="diamond" data-product-id="producto14" data-category="pendientes" data-price-range="6-10" data-name="Pendientes Corazón Corazón"><img src="assets/img/IMG_20250115_180824.jpg" alt="producto14"></div>
+      <div class="diamond" data-product-id="producto15" data-category="pendientes" data-price-range="6-10" data-name="Pendientes Filigrana"><img src="assets/img/IMG_20250219_173008.jpg" alt="producto15"></div>
+      <div class="diamond" data-product-id="producto16" data-category="pendientes" data-price-range="6-10" data-name="Pendientes Pétalos Flamencos"><img src="assets/img/IMG_20250429_191404.jpg" alt="producto16"></div>
+      <div class="diamond" data-product-id="producto17" data-category="pendientes" data-price-range="6-10" data-name="Pendientes Solete"><img src="assets/img/IMG_20250429_191949.jpg" alt="producto17"></div>
+  </div>
+</section>
+
+<!-- Popup -->
+<div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <img id="modalProductImage" src="" alt="Imagen del Producto">
+            <h2 id="modalProductName"></h2>
+            <p id="modalProductDescription"></p>
+            <p id="modalProductPrice"></p>
+            
+            <div id="productColorsContainer" style="margin-top: 15px; display: none;">
+                <label for="productColors">Colores Disponibles:</label>
+                <select id="productColors" style="padding: 8px; border-radius: 5px; border: 1px solid #ccc; margin-left: 10px;">
+                </select>
+            </div>
+            
+            <button id="add-to-cart-button" style="margin-top: 20px; padding: 10px 20px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                Añadir al Carrito
+            </button>
+        </div>
+</div>
+
+ <!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-row">
+            <div class="footer-link">
+                <h4>La marca</h4>
+                <ul>
+                    <li><a href="#">Sobre mí</a></li>
+                    <li><a href="#">Nuestros Servicios</a></li>
+                    <li><a href="#">Política de privacidad</a></li>
+                </ul>
+            </div>
+  
+            <div class="footer-link">
+                <h4>Ayuda</h4>
+                <ul>
+                    <li><a href="#">Preguntas</a></li>
+                    <li><a href="#">Compras</a></li>
+                    <li><a href="#">Envíos</a></li>
+                    <li><a href="#">Pago</a></li>
+                </ul>
+            </div>
+  
+            <div class="footer-link">
+                <h4>Catálogo</h4>
+                <ul>
+                    <li><a href="#">Pendientes</a></li>
+                    <li><a href="#">Accesorios</a></li>
+                    <li><a href="#">Deco</a></li>
+                    <li><a href="#">Pantallas</a></li>
+                </ul>
+            </div>
+  
+            <div class="info">
+                <p>Desing by Érika N.M.</p>
+                <p>📍 Barakaldo (Vizcaya)</p>
+                <p>📧 rousmeriysubaul@gmail.com</p>
+            </div>
+  
+            <img src="assets/img/logomorado.png" class="logomorado">
+            <div class="footer-link">
+                <h4>Síguenos</h4>
+                
+                <div class="social-link">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+  </footer>
+  
+  <div class="copy">
+    <p>© 2025 - Rous Meri y su baúl ✨</p>
+  </div>
+
+      <!-- jquery -->
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+      <!-- js -->
+       <script src="script.js"></script>
+       <script src="productos.js"></script>
+</body>
+</html>
