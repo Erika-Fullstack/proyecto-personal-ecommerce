@@ -1,0 +1,17 @@
+{
+  "name": "proyecto-personal-ecommerce",
+  "version": "1.0.0",
+  "description": "Proyecto personal de final del Bootcamp Desarrollo Web Full Stack",
+  "main": "productos.js",
+  "scripts": {
+    "start": "http-server ./ -p 3000",
+    "test": "playwright test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.53.1",
+    "http-server": "^14.1.1"
+  }
+}

@@ -1,0 +1,127 @@
+# Page snapshot
+
+```yaml
+- banner:
+  - text: 
+  - link "Logo":
+    - /url: "#"
+    - img "Logo"
+  - navigation:
+    - list:
+      - listitem:
+        - link "Inicio":
+          - /url: index.html
+      - listitem:
+        - link "Sobre mi":
+          - /url: about.html
+      - listitem:
+        - link "Productos":
+          - /url: productos.html
+      - listitem:
+        - link "Contacto":
+          - /url: contacto.html
+  - link "":
+    - /url: "#"
+  - link "":
+    - /url: "#"
+- heading [level=3]
+- heading "Accesorios bonitos" [level=3]
+- paragraph: Si quieres lucir los mejores complementos para tu look, no puedes perderte nuestros modelos.
+- heading "Colecciones especiales" [level=3]
+- paragraph: Aquí podrás encontrar colecciones exclusivas y limitadas, pensadas para destacar y culminar tu lookazo.
+- link "ENTRAR":
+  - /url: contacto.html
+- heading "Personaliza tus complementos" [level=3]
+- paragraph: ¿Quieres lucir unos Rous Meri en alguna ocasión especial? Cuéntame de qué se trata y los diseñamos juntas.
+- heading "Buscar Productos" [level=3]
+- text: "Categoría:"
+- combobox "Categoría:":
+  - option "Todas" [selected]
+  - option "Pendientes"
+  - option "Llaveros"
+  - option "Collar"
+  - option "Pulseras"
+- button "Filtrar"
+- img "producto0"
+- img "producto1"
+- img "producto2"
+- img "producto3"
+- img "producto4"
+- img "producto5"
+- img "producto6"
+- img "producto7"
+- img "producto8"
+- img "producto9"
+- img "producto10"
+- img "producto11"
+- img "producto12"
+- img "producto13"
+- img "producto14"
+- img "producto15"
+- img "producto16"
+- img "producto17"
+- text: ×
+- img "Cascada color"
+- heading "Cascada color" [level=2]
+- paragraph: Corazones realizados en resina epoxi, creando una cascada de color. En total son tres corazones que puedes elegir en un sólo color o combinar varios colores.
+- paragraph: 8€
+- text: "Colores Disponibles:"
+- combobox "Colores Disponibles:":
+  - option "Azules" [selected]
+  - option "Verdes"
+  - option "Morados"
+  - option "Rosas"
+  - option "Naranjas"
+  - option "Multicolor"
+- button "Añadir al Carrito"
+- contentinfo:
+  - heading "La marca" [level=4]
+  - list:
+    - listitem:
+      - link "Sobre mí":
+        - /url: "#"
+    - listitem:
+      - link "Nuestros Servicios":
+        - /url: "#"
+    - listitem:
+      - link "Política de privacidad":
+        - /url: "#"
+  - heading "Ayuda" [level=4]
+  - list:
+    - listitem:
+      - link "Preguntas":
+        - /url: "#"
+    - listitem:
+      - link "Compras":
+        - /url: "#"
+    - listitem:
+      - link "Envíos":
+        - /url: "#"
+    - listitem:
+      - link "Pago":
+        - /url: "#"
+  - heading "Catálogo" [level=4]
+  - list:
+    - listitem:
+      - link "Pendientes":
+        - /url: "#"
+    - listitem:
+      - link "Accesorios":
+        - /url: "#"
+    - listitem:
+      - link "Deco":
+        - /url: "#"
+    - listitem:
+      - link "Pantallas":
+        - /url: "#"
+  - paragraph: Desing by Érika N.M.
+  - paragraph: 📍 Barakaldo (Vizcaya)
+  - paragraph: 📧 rousmeriysubaul@gmail.com
+  - img
+  - heading "Síguenos" [level=4]
+  - link "":
+    - /url: "#"
+  - link "":
+    - /url: "#"
+- paragraph: © 2025 - Rous Meri y su baúl ✨
+```
