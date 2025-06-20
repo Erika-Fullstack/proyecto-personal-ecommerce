@@ -61,18 +61,19 @@
 - img "producto16"
 - img "producto17"
 - text: ×
-- img "Llavero perrito globo"
-- heading "Llavero perrito globo" [level=2]
-- paragraph: Llavero con un perrito globo en resina epoxi. Arandela de acero inoxidable.
-- paragraph: 5€
+- img "Abanico"
+- heading "Abanico" [level=2]
+- paragraph: No sé qué tiene este modelo que lo hace tan especial. Base dorada con relieve en acero inoxidable y de ella cuelga un pieza de tela con un grabado.
+- paragraph: 8€
 - text: "Colores Disponibles:"
 - combobox "Colores Disponibles:":
-  - option "Purpurina multicolor" [selected]
-  - option "Purpurina plata"
-  - option "Azul"
+  - option "Turquesa" [selected]
+  - option "Morado"
+  - option "Azul eléctrico"
+  - option "Rosa fucsia"
   - option "Verde"
-  - option "Purpurina rosa"
-  - option "Negro"
+  - option "Arena"
+  - option "Blanco roto"
 - button "Añadir al Carrito"
 - contentinfo:
   - heading "La marca" [level=4]

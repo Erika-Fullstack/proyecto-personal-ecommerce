@@ -129,3 +129,111 @@ test ('Aparece el popup de cada producto al hacer clic', async ({ page }) => {
         await expect(popup).toBeHidden();
     }
 });
+
+// Filtrado
+test ('El filtro por categoría funciona correctamente', async ({ page }) => {
+    await page.goto('http://127.0.0.1:3000/productos.html');    
+    const filtro = page.locator('.filter-box');
+    await expect(filtro).toBeVisible({timeout: 10000});
+});
+
+
+test('El desplegable de búsqueda muestra resultados relacionados', async ({ page }) => {
+  await page.goto('http://127.0.0.1:3000/productos.html');
+
+  const filtro = page.locator('.filter-box');
+  await expect(filtro).toBeVisible();
+
+  const select = page.locator('#category-select');
+  await expect(select).toBeVisible();
+
+  const opciones = select.locator('option');
+
+  // Espera hasta que haya al menos 5 opciones (esperamos el DOM final)
+  await expect(opciones).toHaveCount(5, { timeout: 5000 });
+
+  // Verifica los textos
+  const textosEsperados = ['Todas', 'Pendientes', 'Llaveros', 'Collar', 'Pulseras'];
+  for (let i = 0; i < textosEsperados.length; i++) {
+    await expect(opciones.nth(i)).toHaveText(textosEsperados[i]);
+  }
+});
+
+test('Al seleccionar cada categoría, se muestran solo los productos correspondientes', async ({ page }) => {
+  await page.goto('http://127.0.0.1:3000/productos.html');
+
+  const select = page.locator('#category-select');
+  const categorias = ['pendientes', 'llavero', 'collar', 'pulsera'];
+
+  for (const categoria of categorias) {
+    // Seleccionar la categoría actual en el <select>
+    await select.selectOption(categoria);
+
+    // Esperar a que los productos se actualicen en la galería
+    const productosVisibles = page.locator('.gallery .diamond:visible');
+
+    // Esperamos al menos un producto visible
+    await expect(productosVisibles.first()).toBeVisible({ timeout: 5000 });
+
+    const count = await productosVisibles.count();
+    expect(count).toBeGreaterThan(0);
+
+    // Validamos que todos los productos visibles correspondan a la categoría seleccionada
+    for (let i = 0; i < count; i++) {
+      const producto = productosVisibles.nth(i);
+      const categoriaProducto = await producto.getAttribute('data-category');
+      expect(categoriaProducto?.toLowerCase()).toBe(categoria);
+    }
+  }
+});
+
+//Detalle de producto
+test('El botón "Añadir al Carrito" existe y es visible al abrir el modal', async ({ page }) => {
+  // 1. Ir a la página correcta
+  await page.goto('http://127.0.0.1:3000/productos.html', { waitUntil: 'domcontentloaded' });
+
+  // 2. Hacer clic en el primer producto que abre el modal (ajusta el selector si hace falta)
+  await page.click('.diamond');
+
+  // 3. Esperar que el modal esté visible
+  const modal = page.locator('#productModal');
+  await expect(modal).toBeVisible();
+
+  // 4. Verificar que el botón de añadir al carrito esté visible
+  const boton = page.locator('#add-to-cart-button');
+  await expect(boton).toBeVisible();
+});
+
+//Carrito de compras
+test ('El carrito de compras se abre al hacer clic en el icono del carrito', async ({ page }) => {
+    await page.goto('http://127.0.0.1:3000/productos.html');
+    const carritoIcono = page.locator('.icons .fa-shopping-cart');
+    await expect(carritoIcono).toBeVisible();
+    await carritoIcono.click();
+    const carrito = page.locator('#cart-popup');
+    await expect(carrito).toBeVisible();
+});
+
+test('Cada producto muestra el botón "Añadir al Carrito" al abrirse', async ({ page }) => {
+  await page.goto('http://127.0.0.1:3000/productos.html');
+
+  const productos = page.locator('.gallery .diamond');
+  const count = await productos.count();
+
+  for (let i = 0; i < count; i++) {
+    const producto = productos.nth(i);
+    await producto.click(); // Simula clic en el producto para abrir el modal
+
+    // Espera a que se muestre el modal
+    const modal = page.locator('#productModal');
+    await expect(modal).toBeVisible();
+
+    // Verifica que el botón está visible
+    const botonAgregar = page.locator('#add-to-cart-button');
+    await expect(botonAgregar).toBeVisible();
+
+    // Cierra el modal si es necesario antes de pasar al siguiente
+    const botonCerrar = page.locator('#productModal .close-button');
+    await botonCerrar.click();
+  }
+});
