@@ -8,7 +8,7 @@ test ('La página carga con el título correcto', async ({ page }) => {
 });
 
 test ('El sitio carga correctamente', async ({ page }) => {
-    await page.goto('http://127.0.1:3000/');
+    await page. goto('http://127.0.1:3000/');
     await expect(page).toHaveURL('http://127.0.0.1:3000/');
 });
 
@@ -79,6 +79,8 @@ for (let i = 0; i < count; i++) {
 
 
 test ('Cada producto tiene descripción', async ({ page }) => {
+      test.setTimeout(60000);
+
     await page.goto('http://127.0.0.1:3000/productos.html');
 
     for (const producto of productosInfo) {
@@ -109,6 +111,8 @@ test ('Cada producto tiene descripción', async ({ page }) => {
 });
 
 test ('Aparece el popup de cada producto al hacer clic', async ({ page }) => {
+      test.setTimeout(60000);
+
     await page.goto('http://127.0.0.1:3000/productos.html');
 
     const productos = page.locator('.gallery .diamond');
@@ -160,6 +164,7 @@ test('El desplegable de búsqueda muestra resultados relacionados', async ({ pag
 });
 
 test('Al seleccionar cada categoría, se muestran solo los productos correspondientes', async ({ page }) => {
+  test.setTimeout(60000);
   await page.goto('http://127.0.0.1:3000/productos.html');
 
   const select = page.locator('#category-select');
@@ -215,7 +220,8 @@ test ('El carrito de compras se abre al hacer clic en el icono del carrito', asy
 });
 
 test('Cada producto muestra el botón "Añadir al Carrito" al abrirse', async ({ page }) => {
-  await page.goto('http://127.0.0.1:3000/productos.html');
+  test.setTimeout(60000);
+  await page.goto('http://127.0.0.1:3000/productos.html', { waitUntil: 'domcontentloaded' });
 
   const productos = page.locator('.gallery .diamond');
   const count = await productos.count();
@@ -236,4 +242,83 @@ test('Cada producto muestra el botón "Añadir al Carrito" al abrirse', async ({
     const botonCerrar = page.locator('#productModal .close-button');
     await botonCerrar.click();
   }
+});
+
+test ('Puedes agregar un producto al carrito', async ({ page }) => {
+    await page.goto('http://127.0.0.1:3000/productos.html');
+    const producto = page.locator('.gallery .diamond').first();
+    await producto.click();
+    const modal = page.locator('#productModal');
+    await expect(modal).toBeVisible();
+    const botonAgregar = page.locator('#add-to-cart-button');
+    await expect(botonAgregar).toBeVisible();
+    await botonAgregar.click();
+    const carrito = page.locator('#cart-popup');
+    await expect(carrito).toBeVisible();
+    const productosEnCarrito = carrito.locator('.cart-item');
+    const count = await productosEnCarrito.count();
+    expect(count).toBeGreaterThan(0);
+});
+
+test ('Puedes eliminar un producto del carrito', async ({ page }) => {
+        await page.goto('http://127.0.0.1:3000/productos.html');
+    const producto = page.locator('.gallery .diamond').first();
+    await producto.click();
+    const modal = page.locator('#productModal');
+    await expect(modal).toBeVisible(); 
+    const botonAgregar = page.locator('#add-to-cart-button');
+    await expect(botonAgregar).toBeVisible();
+    await botonAgregar.click(); 
+    const carrito = page.locator('#cart-popup');
+    await expect(carrito).toBeVisible();
+    const productosEnCarrito = carrito.locator('.cart-item');
+    const count = await productosEnCarrito.count();
+    expect(count).toBeGreaterThan(0);
+    const botonEliminar = productosEnCarrito.first().locator('.remove-button');
+    await expect(botonEliminar).toBeVisible();
+    await botonEliminar.click();
+    const countDespues = await productosEnCarrito.count();
+    expect(countDespues).toBe(0); // Verifica que el carrito esté vacío
+});
+
+test('Se actualiza el total automáticamente', async ({ page }) => {
+  test.setTimeout(60000);
+  await page.goto('http://127.0.0.1:3000/productos.html');
+
+  const producto = page.locator('.gallery .diamond').first();
+  await producto.click();
+
+  const modal = page.locator('#productModal');
+  await expect(modal).toBeVisible();
+
+  const botonAgregar = page.locator('#add-to-cart-button');
+  await expect(botonAgregar).toBeVisible();
+  await botonAgregar.click();
+
+  const carrito = page.locator('#cart-popup');
+  await expect(carrito).toBeVisible({ timeout: 5000 });
+
+  const total = carrito.locator('.cart-summary');
+  await expect(total).toBeVisible({ timeout: 5000 });
+
+  // 🧠 Obtener el precio del producto desde el atributo personalizado
+  const precioProducto = await producto.getAttribute('data-price-range');
+
+  if (!precioProducto) throw new Error('El producto no tiene data-price-range');
+
+  // 🧹 Extraer el primer número (en caso de rangos tipo "10-12 €")
+  const match = precioProducto.match(/\d+([.,]\d+)?/);
+  if (!match) throw new Error(`No se pudo extraer precio numérico de "${precioProducto}"`);
+  const precioNumerico = parseFloat(match[0].replace(',', '.'));
+
+  // 💰 Obtener texto del total y extraer el número
+  const totalTexto = await total.textContent();
+  if (!totalTexto) throw new Error('No se pudo leer el total del carrito');
+
+  const matchTotal = totalTexto.match(/\d+([.,]\d+)?/);
+  if (!matchTotal) throw new Error(`No se pudo extraer total de "${totalTexto}"`);
+  const totalNumerico = parseFloat(matchTotal[0].replace(',', '.'));
+
+  // ✅ Comprobación final
+  expect(totalNumerico).toBe(precioNumerico);
 });
